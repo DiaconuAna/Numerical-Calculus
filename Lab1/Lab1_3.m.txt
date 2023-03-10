@@ -1,0 +1,65 @@
+% Polynomials
+polyval([2,-5,0,8],2);
+roots([1,-5,-17,21]);
+
+% Graphs
+
+%1.
+x=0:0.01:1;
+f=exp(10*x.*(x-1)).*sin(12*pi*x);
+%plot(x,f,'r');
+f2=3*exp(5*x.^2-1).*cos(12*pi*x);
+%plot(x,f2,'b');
+
+%2.
+a=6;
+b=15;
+x=0:0.01:10*pi;
+f3=(a+b)*cos(x)-b*cos((a/b+1)*x);
+f4=(a+b)*sin(x)-b*sin((a/b+1)*x);
+%plot(f3,f4,'b');
+
+%3.
+clc
+x=0:0.01:2*pi;
+f5=cos(x);
+f6=sin(x);
+f7=cos(2*x);
+%plot(x,f5,'b');
+hold on %to plot more on same graph sau plot(x,f1,x,f2,x,f3)
+%plot(x,f6,'r');
+%plot(x,f7,'g');
+hold off
+
+%4. 
+x1=-1:0.01:0;
+fx1 = x1.^3 + sqrt(1-x1);
+x2=0.01:0.1:1;
+fx2 = x2.^3 - sqrt(1-x2);
+% plot(x1,fx1,'r',x2,fx2,'g')
+
+%5.
+x=0:2:50;
+y=1:2:49;
+fx=x/2;
+fy=3*y+1;
+% plot(x,fx,'-b',y,fy,'+r');
+
+
+%7.
+x10 = -2:0.01:2;
+y10 = -4:0.01:4;
+%[X,Y] = meshgrid(x10,y10);
+g = exp(-((X-1/2).^2+(Y-1/2).^2));
+mesh(X,Y,g);
+
+%6.
+f=1;
+g=1;
+
+for i = 1:5
+  f = 1/(1+f);
+  g = 1+f;
+end
+
+g
